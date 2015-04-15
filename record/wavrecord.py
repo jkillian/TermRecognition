@@ -16,7 +16,7 @@ def record_word_to_file(output_file_name):
     sample_width, data = _record_word()
     data = pack('<' + ('h'*len(data)), *data)
 
-    wf = wave.open(path, 'wb')
+    wf = wave.open(output_file_name, 'wb')
     wf.setnchannels(CHANNELS)
     wf.setsampwidth(sample_width)
     wf.setframerate(RATE)

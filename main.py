@@ -6,5 +6,5 @@ from record import wavrecord
 
 if __name__ == '__main__':
     print("please speak a word into the microphone")
-    wavrecord.record_to_file('demo.wav')
-    print("done - result written to demo.wav")
+    wavrecord.record_word_to_file('data/output.wav')
+    print("done - result written to data/output.wav")
