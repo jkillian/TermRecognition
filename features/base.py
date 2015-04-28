@@ -142,10 +142,10 @@ def get_filterbanks(nfilt=20,nfft=512,samplerate=16000,lowfreq=0,highfreq=None):
     bin = numpy.floor((nfft+1)*mel2hz(melpoints)/samplerate)
 
     fbank = numpy.zeros([nfilt,nfft/2+1])
-    for j in xrange(0,nfilt):
-        for i in xrange(int(bin[j]),int(bin[j+1])):
+    for j in range(0,nfilt):
+        for i in range(int(bin[j]),int(bin[j+1])):
             fbank[j,i] = (i - bin[j])/(bin[j+1]-bin[j])
-        for i in xrange(int(bin[j+1]),int(bin[j+2])):
+        for i in range(int(bin[j+1]),int(bin[j+2])):
             fbank[j,i] = (bin[j+2]-i)/(bin[j+2]-bin[j+1])
     return fbank                 
     
