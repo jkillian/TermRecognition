@@ -6,7 +6,7 @@ Project for CMPSC448 that detects and recognizes a few distinct spoken terms
 
 ### Credits ###
 * [python_speech_features](https://github.com/jameslyons/python_speech_features)
-
+* cryo (http://stackoverflow.com/questions/892199/detect-record-audio-in-python)
 
 # CMU Course
 Slides may be helpful:
