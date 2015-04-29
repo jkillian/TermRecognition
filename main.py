@@ -11,5 +11,3 @@ if __name__ == '__main__':
     # wavrecord.record_to_file('data/sam_steal15.wav')
     # print("done - result written to demo.wav")
 
-
-
