@@ -1,0 +1,42 @@
+DTW:
+
+terms = ['assist', 'block', 'foul', 'make', 'miss', 'steal']
+name = 'sam'
+lowfreq=50
+highfreq=8000
+num_coefs=7
+remove_coef1 = True
+train_inds = range(1,6)
+test_inds = range(11,16)
+
+assist 11: Closest: assist (2331.98)  Min Avg: assist (2850.61)
+assist 12: Closest: assist (1965.67)  Min Avg: assist (2654.95)
+assist 13: Closest: assist (1974.84)  Min Avg: assist (2669.84)
+assist 14: Closest: assist (2093.16)  Min Avg: assist (2631.52)
+assist 15: Closest: assist (2042.94)  Min Avg: assist (2680.46)
+block 11: Closest: block (1326.32)  Min Avg: block (1480.44)
+block 12: Closest: block (4859.32)  Min Avg: block (5086.95)
+block 13: Closest: block (1158.83)  Min Avg: block (1362.47)
+block 14: Closest: block (1243.54)  Min Avg: block (1337.10)
+block 15: Closest: block (1400.57)  Min Avg: block (1624.15)
+foul 11: Closest: foul (1070.50)  Min Avg: block (1898.42)
+foul 12: Closest: foul (1066.79)  Min Avg: block (1930.83)
+foul 13: Closest: foul (1316.13)  Min Avg: block (2087.65)
+foul 14: Closest: foul (1161.80)  Min Avg: block (1866.05)
+foul 15: Closest: foul (1174.77)  Min Avg: block (1765.75)
+make 11: Closest: make (1086.66)  Min Avg: make (1187.95)
+make 12: Closest: make (984.21)  Min Avg: make (1068.05)
+make 13: Closest: make (1331.28)  Min Avg: make (1395.89)
+make 14: Closest: make (1170.59)  Min Avg: make (1240.83)
+make 15: Closest: make (1104.70)  Min Avg: make (1194.53)
+miss 11: Closest: miss (3087.53)  Min Avg: miss (3447.11)
+miss 12: Closest: miss (3830.41)  Min Avg: miss (4232.33)
+miss 13: Closest: miss (3972.89)  Min Avg: miss (4482.89)
+miss 14: Closest: miss (1393.52)  Min Avg: miss (1477.20)
+miss 15: Closest: miss (1447.01)  Min Avg: miss (1562.02)
+steal 11: Closest: steal (3258.70)  Min Avg: steal (3545.62)
+steal 12: Closest: steal (1650.57)  Min Avg: steal (2563.13)
+steal 13: Closest: steal (1632.71)  Min Avg: make (2571.30)
+steal 14: Closest: steal (1767.65)  Min Avg: make (2639.42)
+steal 15: Closest: steal (2886.77)  Min Avg: steal (3093.81)
+[Finished in 315.7s]
