@@ -26,7 +26,7 @@ class Classifier(object):
         fpaths = []
         labels = []
 
-        for fname in glob('data/*'):
+        for fname in glob('audio/*'):
             fpaths.append(fname)
             label = fname.split('/')[1][:-6]
             labels.append(label)
@@ -46,8 +46,8 @@ class Classifier(object):
         for fname in fpaths:
             mfccs = []
             rate, sig = wav.read(fname)
-            sig = np.array(sig[::5])
-            sig = np.pad(sig, (0, .2*2.1*rate - len(sig)), mode='constant')
+            sig = np.array(sig)
+            sig = np.pad(sig, (0, 2.1*rate - len(sig)), mode='constant')
             fb = np.array(logfbank(sig, rate))
             feats.append(np.transpose(fb))
 
@@ -66,7 +66,7 @@ class Classifier(object):
     def make_models(self, X_train, y_train, word_set):
         """Train self.models on X_train with y_train as the correct labels (ints) for X_train.
             word_set (ints) is the list of potential words to train on."""
-        num_states = 2
+        num_states = 3
         self.models = [gmmhmm(num_states) for word in word_set]
         self.models = [model.fit(X_train[y_train == word, :, :]) for model, word in zip(self.models, word_set)]
 
@@ -84,7 +84,7 @@ class Classifier(object):
 
         feats = self.make_features(fnames)        
 
-        sss = StratifiedShuffleSplit(int_labels, test_size=0.3, random_state=0)
+        sss = StratifiedShuffleSplit(int_labels, test_size=0.8, random_state=0)
 
         for train_index, test_index in sss:
             # train_index: list of indices, len = (1-test_size)*num_audio_files
