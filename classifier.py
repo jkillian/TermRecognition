@@ -36,7 +36,7 @@ class Classifier(object):
         for ind, label in enumerate(set(labels)):
             int_labels[np.array([i for i, _ in enumerate(labels) if _ == label])] = ind
 
-        print "Read {num_files} files".format(num_files=len(int_labels))
+        print("Read {num_files} files".format(num_files=len(int_labels)))
         return (fpaths, labels, int_labels)
 
     def make_features(self, fpaths):
@@ -94,10 +94,10 @@ class Classifier(object):
             y_train, y_test = int_labels[train_index], int_labels[test_index]
 
             self.make_models(X_train, y_train, set(int_labels))
-            print "models trained!"
+            print("models trained!")
             predicted_labels = self.predict(X_test, y_test)
             missed = (predicted_labels != y_test)
-            print 'Test accuracy:%.2f percent' % (100 * (1 - np.mean(missed)))
+            print('Test accuracy:%.2f percent' % (100 * (1 - np.mean(missed))))
             if plot:
                 self.plot(y_test, predicted_labels, list(set(labels)))
             break
